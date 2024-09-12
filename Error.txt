@@ -1,0 +1,13 @@
+What went wrong: java.io.UncheckedIOException: Could not move temporary workspace (C:\React\React Native Template 74\android\.gradle\8.6\dependencies-accessors\423f0288fa7dffe069445ffa4b72952b4629a15a-65792a61-c110-4836-b797-2617cf14f4d1) to immutable location
+
+SOLUTION
+change from : 
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.6-all.zip
+
+to this : 
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-all.zip
+
+===========================================================================================
+* What went wrong: A problem occurred configuring project ':react-native-reanimated'. > [CXX1101] NDK at \Android\Sdk\ndk\26.1.10909125 did not have a source.properties file
+
+Go Android Studio => Open SDK Manager => Go to SDKTools => Install NDK 26.1.10909125
