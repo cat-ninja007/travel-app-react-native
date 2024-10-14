@@ -1,0 +1,12 @@
+import { View, Text } from 'react-native'
+import React from 'react'
+
+const NoteListScreen = () => {
+  return (
+    <View>
+      <Text>NoteListScreen</Text>
+    </View>
+  )
+}
+
+export default NoteListScreen
