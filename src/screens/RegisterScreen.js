@@ -3,8 +3,8 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView } from 'rea
 import { Button } from '../components/ButtonComponent'
 import { Input } from '../components/InputComponent'
 
-const LoginScreen = (props) => {
-  const {navigation} = props
+const RegisterScreen = (props) => {
+  const { navigation } = props
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
       <View style={styles.mainContainer}>
@@ -17,10 +17,14 @@ const LoginScreen = (props) => {
           <Text style={styles.logoText}>Travel App</Text>
         </View>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Welcome Back!</Text>
-          <Text style={styles.subtitle}>Please enter your account here</Text>
+          <Text style={styles.title}>Create Account</Text>
+          <Text style={styles.subtitle}>Register your account here</Text>
         </View>
         <View style={styles.inputContainer}>
+          <Input 
+            title='Email'
+            placeholder='Email'
+          />
           <Input 
             title='Username'
             placeholder='Username'
@@ -30,12 +34,12 @@ const LoginScreen = (props) => {
             placeholder='Password'
           />
         </View>
-        <Button text='Log In' />
+        <Button text='Register' />
         <View style={styles.textContainer}>
-          <Text style={styles.text}>Don't have an account? </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+          <Text style={styles.text}>Already have an account? </Text>
+          <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
             <Text style={styles.registerText}>
-              Register
+              Login
             </Text>
           </TouchableOpacity>
         </View>
@@ -107,4 +111,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default LoginScreen
+export default RegisterScreen
