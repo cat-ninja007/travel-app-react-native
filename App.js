@@ -17,22 +17,18 @@ import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 // import LoginScreen from './src/screens/LoginScreen';
-import RegisterScreen from './src/screens/RegisterScreen';
+// import RegisterScreen from './src/screens/RegisterScreen';
+import MainNavigator from './src/navigator/MainNavigator';
 
 const App = () => {
   return (
-    <GestureHandlerRootView style={styles.container}>
+    <GestureHandlerRootView>
       <SafeAreaProvider>
-        <RegisterScreen />
+        <MainNavigator />
       </SafeAreaProvider>
     </GestureHandlerRootView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

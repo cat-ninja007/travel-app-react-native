@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingLeft: 24,
     paddingRight: 24,
-    marginTop: 32
   },
   titleContainer: {
     marginBottom: 40,

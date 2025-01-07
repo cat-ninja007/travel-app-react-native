@@ -37,7 +37,7 @@ const RegisterScreen = (props) => {
         <Button text='Register' />
         <View style={styles.textContainer}>
           <Text style={styles.text}>Already have an account? </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
             <Text style={styles.registerText}>
               Login
             </Text>
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     paddingLeft: 24,
     paddingRight: 24,
-    marginTop: 32
   },
   titleContainer: {
     marginBottom: 40,
