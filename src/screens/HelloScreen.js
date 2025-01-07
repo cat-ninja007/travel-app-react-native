@@ -1,13 +1,25 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+// In your HelloScreen.js (or HelloScreen.tsx)
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 const HelloScreen = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{fontSize: 48, fontWeight: '700'}}>Hello!</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Hello, you are logged in!</Text>
     </View>
-  )
-}
+  );
+};
 
-export default HelloScreen
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+    color: 'black',
+  },
+});
 
+export default HelloScreen;
