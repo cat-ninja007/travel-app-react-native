@@ -15,18 +15,21 @@ export const Button = (props) => {
 
 const styles = StyleSheet.create({
   buttonContainer:{
-    width: '40%',
+    width: '100%',
     alignItems: 'center',
-    borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 10,
     margin: 16,
-    backgroundColor: '#CAE3BB'
+    backgroundColor: 'rgba(22, 60, 159, 1)'
   },
   button: {
-    padding: 8
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingLeft: 24,
+    paddingRight: 24,
   },
   text: {
-    textTransform: 'uppercase',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'rgba(242, 242, 242, 1)',
+    fontSize: 16
   }
 })

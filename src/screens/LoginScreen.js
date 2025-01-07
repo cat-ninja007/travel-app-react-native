@@ -7,11 +7,17 @@ const LoginScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.scroll}>
       <View style={styles.mainContainer}>
+        
         <View style={styles.imageContainer}>
           <Image 
             style={styles.image}
             source={require('../../assets/images/travel-logo.png')}
           />
+          <Text style={styles.logoText}>Travel App</Text>
+        </View>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Welcome Back!</Text>
+          <Text style={styles.subtitle}>Please enter your account here</Text>
         </View>
         <View style={styles.inputContainer}>
           <Input 
@@ -23,9 +29,9 @@ const LoginScreen = () => {
             placeholder='Password'
           />
         </View>
-        <Button text='Login' />
+        <Button text='Log In' />
         <View style={styles.textContainer}>
-          <Text style={styles.text}>Don't have an account?</Text>
+          <Text style={styles.text}>Don't have an account? </Text>
           <TouchableOpacity>
             <Text style={styles.registerText}>
               Register
@@ -39,37 +45,65 @@ const LoginScreen = () => {
 
 const styles = StyleSheet.create({
   scroll: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   mainContainer: {
-    backgroundColor: '#E6E6FA',
+    backgroundColor: 'rgba(255, 255, 255, 1)',
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'flex-start',
+    paddingLeft: 24,
+    paddingRight: 24,
+    marginTop: 32
+  },
+  titleContainer: {
+    marginBottom: 40,
+  },
+  title:{
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'rgba(46, 62, 92, 1)',
+    marginBottom: 8
+  },
+  subtitle:{
+    fontSize: 14,
+    fontWeight: '500',
+    textAlign: 'center',
+    color: 'rgba(129, 137, 176, 1)'
   },
   imageContainer: {
     marginTop: 32,
-    marginBottom: 16
+    marginBottom: 64,
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   image: {
-    width: 180,
-    height: 180
+    width: 80,
+    height: 80
+  },
+  logoText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: 'rgba(46, 62, 92, 1)'
   },
   inputContainer: {
-    padding: 16,
-    width: '100%'
+    width: '100%',
+    marginBottom: 32
   },
   textContainer: {
     flexDirection: 'row',
-    marginTop: 16
+    marginTop: 52
   },
   text: {
-    fontSize: 16
+    fontSize: 16,
+    color: 'rgba(46, 62, 92, 1)'
   },
   registerText: {
-    color: '#1A5B0A',
-    fontSize: 16
-  }
+    color: 'rgba(22, 60, 159, 1)',
+    fontSize: 16,
+    fontWeight: 'bold'
+  },
 })
 
 export default LoginScreen
